@@ -6,19 +6,19 @@ const uglify = require('gulp-uglify');
 function scripts() {
     return gulp.src('./src/scripts/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('./dist/js'))
+        .pipe(gulp.dest('./public/js')) // Alterado de dist/ para public/
 }
 
 function styles() {
     return gulp.src('./src/styles/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }))
-        .pipe(gulp.dest('./dist/css'));
+        .pipe(gulp.dest('./public/css')); // Alterado de dist/ para public/
 }
 
 function images() {
     return gulp.src('./src/images/**/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./dist/images'));
+        .pipe(gulp.dest('./public/images')); // Alterado de dist/ para public/
 }
 
 exports.default = gulp.parallel(styles, images, scripts);
