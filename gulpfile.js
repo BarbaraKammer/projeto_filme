@@ -21,7 +21,13 @@ function images() {
         .pipe(gulp.dest('./public/images')); // Alterado de dist/ para public/
 }
 
-exports.default = gulp.parallel(styles, images, scripts);
+function fonts() {
+    return gulp.src('./assets/fonts/**/*') // Caminho das fontes
+        .pipe(gulp.dest('./public/fonts')); // Destino dentro de public
+}
+
+
+exports.default = gulp.parallel(styles, images, scripts,fonts);
 
 exports.watch = function() {
     gulp.watch('./src/styles/*.scss', gulp.parallel(styles))

@@ -6,15 +6,16 @@
 
 @font-face {
     font-family: Avenir;
-    src: url(../../assets/fonts/Avenir-Regular.woff2);
+    src: url('/fonts/Avenir-Regular.woff2'); /* Caminho para a pasta public/fonts */
     font-weight: 400;
 }
 
 @font-face {
     font-family: Avenir;
-    src: url(../../assets/fonts/Avenir-Bold.woff2);
+    src: url('/fonts/Avenir-Bold.woff2'); /* Caminho para a pasta public/fonts */
     font-weight: 700;
 }
+
 
 * {
     margin: 0;
